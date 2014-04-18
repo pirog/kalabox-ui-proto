@@ -2,6 +2,9 @@
   "name": "kalabox",
   "node-main": "app.js",
   "main": "index.html",
+  "bin": {
+    "kalabox": "bin/start.sh"
+  },
   "version": "1.0.0",
   "private": true,
   "window": {
@@ -14,7 +17,11 @@
     "position": "center",
     "resizeable" : "false"
   },
+  "scripts": {
+    "start": "nodewebkit app.js"
+  },
   "dependencies": {
+    "nodewebkit": "^0.8.5",
     "express": "2.5.8",
     "ejs": ">= 0.0.1",
     "socket.io": "0.9.14",
